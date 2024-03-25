@@ -47,8 +47,10 @@ def refreshView(self):
     self.onSearchActivated()
     if SORTING_COLUMN:
         try:
-            col_index = self.model.activeCols.index(SORTING_COLUMN)
-            self.onSortChanged(col_index, True)
+            # TODO: Figure out new method to sort rows?
+            #col_index = self.model.activeCols.index(SORTING_COLUMN)
+            #self.onSortChanged(col_index, True)
+            # For now, just refresh the browser view as the user has it.
             self.form.tableView.selectRow(0)
         except ValueError:
             pass
